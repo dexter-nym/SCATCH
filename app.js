@@ -3,7 +3,7 @@ const app = express();
 
 const port = 3000;
 
-const mongoose = require('mongoose');
+const db = require('./config/mongoose-connection')
 const cookieParser = require('cookie-parser');
 const path = require('path');
 const jwt = require('jsonwebtoken');

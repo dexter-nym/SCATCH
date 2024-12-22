@@ -12,5 +12,4 @@ const ownerSchema = mongoose.Schema({
     gstin : Number,
 });
 
-
 module.exports = mongoose.Model('owner', ownerSchema);
