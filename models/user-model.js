@@ -1,9 +1,18 @@
 const mongoose = require('mongoose');
 
 const userSchema = mongoose.Schema({
-    fullname : String,
-    email : String,
-    password : String,
+    fullname : {
+        type: String,
+        required: true,
+    },
+    email : {
+        type: String,
+        required: true,
+    },
+    password : {
+        type: String,
+        required: true,
+    },
     cart : {
         type : Array,
         default : [],
@@ -16,4 +25,4 @@ const userSchema = mongoose.Schema({
     contact : Number,
 });
 
-module.exports = mongoose.Model('user', userSchema);
+module.exports = mongoose.model('user', userSchema);
