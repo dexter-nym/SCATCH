@@ -2,6 +2,10 @@ const express = require('express');
 const router = express.Router();
 const ownerModel = require('../models/owner-model');
 
+router.get('/', function (req, res) {
+    res.send('Owners route');
+});
+
 // console.log(process.env.NODE_ENV) // to check the node env variable, if not setup returns undefined
 
 if(process.env.NODE_ENV === "development"){
@@ -22,9 +26,8 @@ if(process.env.NODE_ENV === "development"){
     });
 }
 
-
-router.get('/', function (req, res) {
-    res.send('Owners route');
+router.get('/admin', function (req, res) {
+    res.render('createproducts');
 });
 
 module.exports = router;
